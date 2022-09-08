@@ -1,3 +1,4 @@
+import './NavBar.css'
 import nuevologo from "../logo.png";
 import usuario from "../usuario.png";
 

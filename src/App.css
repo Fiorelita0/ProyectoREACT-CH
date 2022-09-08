@@ -36,30 +36,3 @@
         transform: rotate(360deg);
     }
 }
-
-
-/*NavBar*/
-
-.bg-rojo {
-    background-color: pink;
-}
-
-.navbar-logo {
-    width: 70px;
-    height: 70px;
-}
-
-.display-flex {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.navbar-items {
-    margin: 0px 105px 0px 105px;
-    padding: 0 60% 0 60%;
-}
-
-.navbar-usuario {
-    width: 50px;
-    height: 50px;
-}
