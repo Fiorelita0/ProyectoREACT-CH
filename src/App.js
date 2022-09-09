@@ -1,12 +1,17 @@
-import './App.css';
+import './App.css'
 //Incorporar componente
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
-function App() {
-    return ( <div>
+const App = () => {
+  return (
+    <>
+      <div>
         <NavBar />
-        </div>
-    );
+        <ItemListContainer greeting= "Hola, Usuario"/>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
