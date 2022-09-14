@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
-import { useState } from 'react'
+import { useState } from 'react';
+import './ItemCount.css';
 
 const ItemCount = ({initial, stock}) => {
     const [contador, setContador]=useState (initial); //hook
@@ -26,10 +27,10 @@ const ItemCount = ({initial, stock}) => {
     }
   return (
     <>
-    <button onClick={() => sumar()}> + </button>
-    <button onClick={() => restar()}> - </button>
-    <span> {contador} </span>
-    <button onClick={() => agregarAlChango()}> Agregar al Carrito </button>
+    <button className='btn btn-rosa' onClick={() => restar()}> - </button>
+    <span className='number' > {contador} </span>
+    <button className='btn btn-rosa' onClick={() => sumar()}> + </button>
+    <button className='block btn btn-rosalight' onClick={() => agregarAlChango()}> Agregar al Carrito </button>
     
     </>
   )
