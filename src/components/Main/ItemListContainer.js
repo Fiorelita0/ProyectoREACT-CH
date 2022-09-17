@@ -20,7 +20,7 @@ const ItemListContainer = ({greeting}) => {
     <div>
       <div>{greeting}</div>
       <div>
-        <ItemCount initial={1} stock={15} />
+        <ItemCount initial={1} stock={15}/>
       </div>
       <div>
         <ItemList data={data}/> 

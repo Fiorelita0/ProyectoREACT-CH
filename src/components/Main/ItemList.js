@@ -12,10 +12,11 @@ const ItemList = ({data}) => {
         id={product.id} 
         title={product.title} 
         marca={product.marca} 
+        categoria={product.categoria}
         imagen={product.imagen}
-        descripcion={product.description}
+        descripcion={product.descripcion}
         precio={product.precio}
-        categoria={product.category}
+        stock={product.stock}
         />
       ))}
     </div>

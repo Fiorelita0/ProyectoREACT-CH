@@ -1,11 +1,12 @@
 import React from 'react'
+import "./Item.css"
 
-const Item = ({id, title, imagen, marca, precio, description, category}) => {
+const Item = ({id, title, imagen, marca, precio, descripcion, stock, categoria}) => {
     console.log(title)
   return (
     <div>
 
-    <div>{id}</div>
+    <div className='id' >{id}</div>
     <div>
        <h1>{title}</h1>
     </div>
@@ -13,10 +14,11 @@ const Item = ({id, title, imagen, marca, precio, description, category}) => {
       <img src={imagen} alt={title} />
     </div>
     <div>{marca}</div>
+    <div>{categoria}</div>
     <div>{precio}</div>
-    <div>{description}</div>
-    <div>{category}</div>
-
+    <div>{descripcion}</div>
+    <div>{stock}</div>
+    
     </div>
   )
 }
