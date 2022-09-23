@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //Incorporar componente
@@ -10,11 +11,10 @@ const App = () => {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element= {<ItemListContainer greeting="Bienvenido Usuario" />} />
+        <Route path="/" element= {<ItemListContainer greeting="Bienvenido Usuario"/>} />
         <Route path="/categoria/:id" element={<ItemListContainer />}/>
         <Route path="/detalle/:id" element={<ItemDetailContainer />}/>
       </Routes>
-
     </BrowserRouter>
   );
 };
