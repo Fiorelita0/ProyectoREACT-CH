@@ -1,10 +1,11 @@
 import React from "react";
 import Item from "./Item";
+import "./ItemList.css"
 
 const ItemList = ({data}) => {
     console.log (data)
   return (
-    <div>
+    <div className="d-flex">
       {
       data.map((product)=> (
         <Item 
@@ -14,6 +15,7 @@ const ItemList = ({data}) => {
         marca={product.marca} 
         categoria={product.categoria}
         imagen={product.imagen}
+        peso={product.peso}
         descripcion={product.descripcion}
         precio={product.precio}
         stock={product.stock}

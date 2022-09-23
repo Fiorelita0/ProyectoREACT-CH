@@ -2,6 +2,7 @@ import "./NavBar.css";
 import nuevologo from "../logo.png";
 import usuario from "../usuario.png";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -9,26 +10,22 @@ function NavBar() {
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-rojo display-flex">
           <div className="display-flex">
-            <a className="navbar-brand" href="index.html">
-              <img
-                className="navbar-logo"
-                src={nuevologo}
-                alt="Logo del petshop"
-              />
-            </a>
+            <Link className="navbar-brand" to="/">
+                <img
+                  className="navbar-logo"
+                  src={nuevologo}
+                  alt="Logo del petshop"
+                />
+            </Link>
             <div
               className="collapse navbar-collapse display-flex text-center"
               id="navbarNavAltMarkup"
             >
               <div className="navbar-nav navbar-items">
-                <a className="nav-item nav-link" href="mascotas.html">
-                  Mascotas<span className="sr-only">(current)</span>
-                </a>
-                <a className="nav-item nav-link" href="marcas.html">
-                  Marcas
-                </a>
-                <a className="nav-item nav-link" href="sucursales.html">
-                  Sucursales
+                <Link className="nav-item nav-link" to="/categoria/secos">Secos</Link>
+                <Link  className="nav-item nav-link" to="/categoria/humedos">Humedos</Link>
+                <a className="nav-item nav-link" href="snacks.html">
+                  Snacks
                 </a>
                 <a className="nav-item nav-link" href="ayuda.html">
                   Ayuda
@@ -39,7 +36,7 @@ function NavBar() {
                 src={usuario}
                 alt="Logo de usuario"
               />
-                <CartWidget />
+              <CartWidget />
             </div>
           </div>
         </nav>

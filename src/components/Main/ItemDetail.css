@@ -2,4 +2,13 @@
     background-color: rgba(255, 102, 140, 0.555);
     margin: 0px 22px;
     width: 200px;
+}
+.flex{ 
+    display: flex;
+    flex-flow: row wrap;
+}
+.img-product {
+    width: 160px;
+    height: 230px;
+    padding: 10px 10px;
   }
