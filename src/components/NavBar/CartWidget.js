@@ -9,12 +9,7 @@ const CartWidget = () => {
     <>
       {ctx.calcQty() !== 0 && (
         <button className="navbar-toggler" type="button" id="btnCarritoNav">
-          <span
-            color="graya100"
-            data-testid="typography"
-            className="cantProdCarr"
-            id="cantProdCarrito"
-          >
+          <span>
             {ctx.calcQty()}
           </span>
         </button>
