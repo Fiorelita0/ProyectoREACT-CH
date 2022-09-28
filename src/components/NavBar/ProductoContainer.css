@@ -6,3 +6,6 @@
     display: flex;
     flex-flow: row nowrap
 }
+.title-prod{
+    margin-right: 40px;
+}
