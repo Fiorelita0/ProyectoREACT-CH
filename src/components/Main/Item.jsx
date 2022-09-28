@@ -8,10 +8,14 @@ const Item = ({ id, title, imagen, marca, precio, stock, categoria, peso }) => {
     <div className="block">
       <div className="carta">
         <div className="id">{id}</div>
-        <div><h1 className="card-title">{title}</h1></div>
+        <div>
+          <Link to={`/detalle/${id}`}  style={{ textDecoration: 'none' }}>
+            <h1 className="card-title">{title}</h1>
+          </Link>
+        </div>
         <div>
           <Link to={`/detalle/${id}`}>
-          <img className="img-producto" src={imagen} alt={title} />
+            <img className="img-producto" src={imagen} alt={title} />
           </Link>
         </div>
         <div>Marca : {marca}</div>

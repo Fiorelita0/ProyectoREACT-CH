@@ -1,11 +1,12 @@
 .id {
   font-size: 1.5rem;
 }
-.flex{ 
-    display: flex;
-    flex-flow: row wrap;
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  
 }
-.block{
+.block {
   display: block;
   flex-flow: row wrap;
 }
@@ -16,17 +17,25 @@
 }
 .card-title {
   font-size: 1rem;
+  color: black;
   display: flex;
-    justify-content: center;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: none;}
+
+.card-title:hover{ 
+  color: rgb(255, 97, 124);
+  text-align: center;
+  text-decoration: none;
+  box-shadow: none;
 }
 .carta {
-    display: block;
-    flex-flow: row wrap;
-    border: 2px solid rgb(255, 206, 218);
-    width: 350px;
-    height: 520px;
-    padding: 1px 35px;
-    margin: 10px 50px 10px 40px;
+  display: block;
+  flex-flow: row wrap;
+  border: 2px solid rgb(255, 206, 218);
+  width: 350px;
+  height: 520px;
+  padding: 1px 35px;
+  margin: 10px 50px 10px 40px;
 }
-
-

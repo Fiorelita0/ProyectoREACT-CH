@@ -13,8 +13,9 @@
 }
 
 .navbar-items {
-    margin: 0px 95px 0px 95px;
-    padding: 0 50% 0 50%;
+    font-size: 1rem;
+    margin: 0px 120px 0px 120px;
+    padding: 0 40% 0 50%;
 }
 
 .navbar-usuario {

@@ -33,7 +33,9 @@ function NavBar() {
                 src={usuario}
                 alt="Logo de usuario"
               />
+              <Link to="/cart">
               <CartWidget />
+              </Link>
             </div>
           </div>
         </nav>

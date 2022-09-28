@@ -1,13 +1,18 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount.js";
 import "./ItemDetail.css";
+import {Link} from "react-router-dom";
+import { CartContext } from '../NavBar/CartContext'
 
 const ItemDetail = ({ producto }) => {
   const [contador, setContador] = useState(0);
+  const cont = useContext(CartContext);
+
   const onAdd = (count) => {
     alert(`Se añadio ${count} productos`);
     setContador(count);
+    cont.addItem(producto, count);
   };
   return (
     <div>
@@ -39,14 +44,18 @@ const ItemDetail = ({ producto }) => {
                 onAdd={onAdd}
               />
             ) : (
+              <Link to= "/cart">
               <button type="button" className="btn btn-original">
                 Ver Carrito
               </button>
+              </Link>
             )}
           </div>
         </div>
       </div>
+      
     </div>
+    
   );
 };
 
