@@ -1,35 +1,62 @@
 import React from "react";
-import { useEffect, useState } from 'react';
-import {useParams} from 'react-router-dom'
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import fetchData from "../../utils/fetchData";
-import products from "../../utils/products";
+import Loading from "./LazyLoading";
+import {db} from '../../utils/firebaseConfig';
+import { collection, getDocs, where, query } from "firebase/firestore";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({ greeting }) => {
+  const [comp, setComp] = useState(true);
   const [data, setData] = useState([]);
-  const {id}= useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    if (id){
-      fetchData(1000, products.filter(item =>item.categoria === id))
-      .then(result => setData(result))
-      .catch (err => console.log(err));
-    }
-    else{
-      fetchData(2000, products)
-    .then(result => setData(result))
-    .catch (err => console.log(err));
+    setComp(true);
+    async function fetchData() {
+      if (id) {
+          const q = query(collection(db, "products"), where('categoria', '==', id))
+          const querySnapshot = await getDocs(q);
+          const products = querySnapshot.docs.map(item => ({
+              id: item.id,
+              ...item.data()
+          }))
+          setData(products)
+       
+      } else {
+          const querySnapshot = await getDocs(collection(db, "products"));
+          const products = querySnapshot.docs.map(item => ({
+              id: item.id,
+              ...item.data()
+          }))
+          setData(products)
+      }
+      setComp(false)
   }
-},[id]);
+  fetchData()
+}, [id])
 
+useEffect(() => {
+  return (()=> {
+    setData([]);
+  })
+}, []);
   return (
     <>
-    <div>
-      <div>{greeting}</div>
       <div>
-        <ItemList data={data}/> 
+        <div>{greeting}</div>
+        <div>
+          {comp ? (
+            <Loading />
+          ) : (
+            <>
+              <section className="container-lg containerProducts ">
+                <ItemList data={data} />
+              </section>
+            </>
+          )}
+        </div>
       </div>
-    </div>
     </>
   );
 };

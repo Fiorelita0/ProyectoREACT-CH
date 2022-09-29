@@ -1,32 +1,40 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {useParams} from 'react-router-dom';
-import products from "../../utils/products";
-import fetchData from "../../utils/fetchData";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-
+import Loading from "./LazyLoading";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../utils/firebaseConfig'
 const ItemDetailContainer = () => {
+  const [comp, setComp] = useState(true);
   const [data, setData] = useState([]);
-  const {id}= useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    if (id){ fetchData(2000, products.find(item =>item.id === parseInt(id)))
-    .then(result => setData(result))
-    .catch (err => console.log(err))}
-    else{
-      fetchData(2000, products)
-    .then(result => setData(result))
-    .catch (err => console.log(err));
+    setComp(true);
+    async function fetchData() {
+      const docSnap = await getDoc(doc(db, 'products', id))
+      let product = { id: id, ...docSnap.data() }
+      if (product.title !== undefined) {
+          setData(product)
+          setComp(false);
+      }
   }
-  }, [id]);
-
+  fetchData()
+}, [id])
 
   console.log(data);
   return (
     <>
       <div>
         <div>
-          <ItemDetail producto={data} />
+          {comp ? (
+            <Loading />
+          ) : (
+            <div>
+              <ItemDetail producto={data} />
+            </div>
+          )}
         </div>
       </div>
     </>
@@ -34,4 +42,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-
