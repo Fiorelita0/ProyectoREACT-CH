@@ -11,9 +11,9 @@ const ItemDetail = ({ producto }) => {
 
   const onAdd = (count) => {
     alert(`Se añadio ${count} productos`);
-    setContador(count);
     cont.addItem(producto, count);
-  };
+     setContador(count);
+  }
   return (
     <div>
       <div id={producto.id}>

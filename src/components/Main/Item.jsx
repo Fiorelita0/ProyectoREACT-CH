@@ -15,7 +15,7 @@ const Item = ({ id, title, imagen, marca, precio, stock, categoria, peso }) => {
         </div>
         <div>
           <Link to={`/detalle/${id}`}>
-            <img className="img-producto" src={imagen} alt={title} />
+            <img className="imagen-producto" src={imagen} alt={title}/>
           </Link>
         </div>
         <div>Marca : {marca}</div>

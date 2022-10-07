@@ -8,7 +8,7 @@ const Cart = () => {
   const ctx = useContext(CartContext);
   const [loading, setLoading] = useState(true);
   const [comp, setComp] = useState(true);
-
+  
   useEffect(() => {
     ctx.cartList.length === 0 ? setComp(true) : setComp(false);
   }, [ctx.cartList]);
@@ -25,7 +25,7 @@ const Cart = () => {
           <button onClick={ctx.clear} className= "btn btn-primary"> Eliminar todos los productos</button>
           </div>
           <div>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: 'none'}}>
                 <button type="button" className="btn btn-secundary">
                   Seguir comprando
                 </button>

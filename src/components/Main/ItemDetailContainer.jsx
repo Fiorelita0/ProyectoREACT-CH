@@ -5,6 +5,7 @@ import ItemDetail from "./ItemDetail";
 import Loading from "./LazyLoading";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../../utils/firebaseConfig'
+
 const ItemDetailContainer = () => {
   const [comp, setComp] = useState(true);
   const [data, setData] = useState([]);
@@ -23,7 +24,6 @@ const ItemDetailContainer = () => {
   fetchData()
 }, [id])
 
-  console.log(data);
   return (
     <>
       <div>

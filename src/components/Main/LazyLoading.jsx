@@ -4,7 +4,7 @@ function Loading() {
     return (
         <div>
             <div>
-                <h1>Cargando...</h1>
+                <h1>Cargando... Por favor espere un momento</h1>
             </div>
         </div>
     )
