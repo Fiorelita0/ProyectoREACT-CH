@@ -27,8 +27,9 @@ const Cart = () => {
     }));
     let orden = {
       buyer: {
-        name: "Leo messi",
+        name: "Fiorella Yao Quispe",
         phone: 1155865100,
+        email: 'fiorequispe0@gmail.com',
       },
       items: itemsOrden,
       date: serverTimestamp(),

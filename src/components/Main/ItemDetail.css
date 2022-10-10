@@ -3,13 +3,16 @@
     margin: 0px 22px;
     width: 200px;
 }
-.flex{ 
+.display_flex{ 
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
 }
 .img-product {
     width: 280px;
     height: 400px;
     padding: 10px 10px;
     object-fit: cover;
+  }
+  .descripcion{
+    padding-right: 100px;
   }

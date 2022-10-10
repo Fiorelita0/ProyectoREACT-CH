@@ -16,14 +16,13 @@ const ItemDetail = ({ producto }) => {
   }
   return (
     <div>
-      <div id={producto.id}>
+      <div className="display_flex" id={producto.id}>
         <div>
           <img
             className="img-product"
             src={producto.imagen}
             alt={producto.title}
           />
- 
         </div>
         <div>
           <h1>{producto.title}</h1>
@@ -35,7 +34,7 @@ const ItemDetail = ({ producto }) => {
           <p>
             Precio : <span>${producto.precio}</span>
           </p>
-          <p>{producto.descripcion}</p>
+          <p className="descripcion">{producto.descripcion}</p>
           <div>
             {contador === 0 ? (
               <ItemCount
