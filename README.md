@@ -7,7 +7,7 @@ Proyecto E-commerce creado para curso de React.js dado por Coderhouse. Es la cul
 ![react completo](https://user-images.githubusercontent.com/103838047/194798299-86d3dd26-1931-437b-93e1-5ffa97ab77fd.png)
 
 ## Instalación 🔧
-Clonar el repositorio - git clone 
+Clonar el repositorio - gh repo clone Fiorelita0/ProyectoREACT-CH
 Instalar las dependencias - npm install
 Ejecutar el proyecto - npm start
 
