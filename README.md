@@ -6,16 +6,16 @@ Proyecto E-commerce creado para curso de React.js dado por Coderhouse. Es la cul
 
 ![react completo](https://user-images.githubusercontent.com/103838047/194798299-86d3dd26-1931-437b-93e1-5ffa97ab77fd.png)
 
-##Instalación 🔧
+## Instalación 🔧
 Clonar el repositorio - git clone 
 Instalar las dependencias - npm install
 Ejecutar el proyecto - npm start
 
-##Construido con 🛠️
+## Construido con 🛠️
 React.js - Librería de Frontend
 JavaScript - Lenguaje usado
 React-Router-Dom - Librería para el ruteo de la pagina
 FireBase - Base de datos de google
 
-##Autor ✒️
+## Autor ✒️
 Fiorella Yao Quispe
