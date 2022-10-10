@@ -15,10 +15,19 @@ const prodPrecio= (id)=>{
     let precioPorCant =cartList.find((prod) => prod.id === id);
     return (precioPorCant.qty * precioPorCant.precio)
 }
+//Precio Subtotal
+const subPrecio= () =>{
+  let precioPorCant =cartList.map(item => prodPrecio(item.id));
+  return precioPorCant.reduce((acumulador, precioPorProd) => acumulador + precioPorProd, 0);
+}
+const descuento =() =>{
+  let descuentoTotal= cartList.map(item => (prodPrecio(item.id) * 0.20));
+  return descuentoTotal.reduce((acumulador, precioPorProd) => acumulador + precioPorProd, 0)
+}
 //Precio Final
 const finalPrecio = () => {
-    let precioPorCant =cartList.map(item => (item.precio * item.qty));
-    return precioPorCant.reduce((acumulador, precioPorProd) => acumulador + precioPorProd, 0);
+    let precioTotal =cartList.map(item => (prodPrecio(item.id) -  prodPrecio(item.id) * 0.20));
+    return precioTotal.reduce((acumulador, precioPorProd) => acumulador + precioPorProd, 0);
 }
 //Verifica si el producto existe en el cartList
 const isInCart = (id) =>  { return cartList.find(producto => id === producto.id);}
@@ -36,7 +45,7 @@ const addCantCart = (producto, qty) => {
     } else setCartList(addCantCart(producto, qty))
   };
 //Eliminar todos los productos
-  const clear = () => {
+  const clearAll = () => {
     setCartList([]);
   };
 //Eliminar un producto
@@ -44,7 +53,7 @@ const addCantCart = (producto, qty) => {
     setCartList(cartList.filter((item) => item.id !== id));
   };
   return (
-    <CartContext.Provider value={{ cartList, addItem, clear, removeItem, isInCart, addCantCart, calcQty, prodPrecio, finalPrecio}}>
+    <CartContext.Provider value={{ cartList, addItem, clearAll, removeItem, isInCart, addCantCart, calcQty, prodPrecio, finalPrecio, descuento, subPrecio}}>
       {children}
     </CartContext.Provider>
   );

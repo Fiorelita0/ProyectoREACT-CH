@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import ItemCount from "./ItemCount.js";
 import "./ItemDetail.css";
 import {Link} from "react-router-dom";
-import { CartContext } from '../NavBar/CartContext'
+import { CartContext } from '..//Main/CartContext'
 
 const ItemDetail = ({ producto }) => {
   const [contador, setContador] = useState(0);
@@ -27,7 +27,7 @@ const ItemDetail = ({ producto }) => {
         </div>
         <div>
           <h1>{producto.title}</h1>
-          <p>Stock disponible: {producto.stock} </p>
+          <p>Stock disponible: {producto.stock}</p>
           <p>Peso de la unidad: {producto.peso}</p>
           <p>
             Marca: <span>{producto.marca}</span>

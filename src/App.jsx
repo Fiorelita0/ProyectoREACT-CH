@@ -3,10 +3,10 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //Incorporar componente
 import NavBar from "./components/NavBar/NavBar";
-import Cart from "./components/NavBar/Cart"
+import Cart from "./components/Main/Cart"
 import ItemDetailContainer from "./components/Main/ItemDetailContainer";
 import ItemListContainer from "./components/Main/ItemListContainer";
-import CartContextProvider from "./components/NavBar/CartContext";
+import CartContextProvider from "./components/Main/CartContext";
 
 const App = () => {
   return (

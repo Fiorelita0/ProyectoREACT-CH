@@ -1,0 +1,43 @@
+.display-block {
+  display: block;
+  flex-flow: row wrap;
+}
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+.btn-pink {
+  background-color: rgb(255, 206, 218);
+}
+.btn-clear{
+  margin: 10px 900px 30px 20px;
+
+}
+.btn-top {
+  margin: 10px 10px 30px 20px;
+}
+.orden{
+  margin: 10px 10px 10px 65%;
+  position: absolute;
+  border: 1px black solid;
+  padding: 85px 65px 10px 90px;
+}
+.title-pedido{
+  font-size: 2.5rem;
+  position: absolute;
+  margin: -70px 0px 0px -60px;
+}
+.parrafo{
+  font-size: 1.4rem;
+  margin: 10px 10px 10px -40px;
+}
+.total-pedido{
+  font-size: 2rem;
+margin: 10px 10px 10px -40px;
+}
+.btn-pedido{
+  padding: 10px 80px;
+  margin: 20px 10px 10px 10px;
+}

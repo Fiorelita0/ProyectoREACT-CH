@@ -1,0 +1,42 @@
+.producto {
+  margin: 20px 0px 50px 0px;
+}
+.img-prod {
+  width: 150px;
+  height: 220px;
+  margin: 0px 15px 0px 15px;
+  object-fit: cover;
+}
+.display-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+.display-block {
+  display: block;
+  flex-flow: row wrap;
+}
+.title-prod {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.btn-pink {
+  background-color: rgb(255, 206, 218);
+}
+
+.button {
+  margin: 10px 0px 0px -40%;
+}
+.prod-precio {
+  margin: 35px 10px 0px 26%;
+  position: absolute;
+}
+.prod-total {
+  font-size: 1.5rem ;
+  margin: 65px 10px 0px 26%;
+  position: absolute;
+}
+.btn-remove {
+  margin: 15% 0px 0px 34%;
+  position: absolute;
+}

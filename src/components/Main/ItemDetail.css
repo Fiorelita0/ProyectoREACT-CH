@@ -11,4 +11,5 @@
     width: 280px;
     height: 400px;
     padding: 10px 10px;
+    object-fit: cover;
   }
